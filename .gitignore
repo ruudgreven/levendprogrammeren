@@ -1,0 +1,10 @@
+# Config files and so on
+.DS_Store
+config.inc.php
+.htaccess
+*.zip
+
+# IntelliJ project files
+*.iml
+*.ipr
+*.iws
