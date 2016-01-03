@@ -50,11 +50,11 @@
             ga('send', 'event', 'Downloads', dtype, url, {
                 'transport': 'beacon',
                 'hitCallback': function () {
-                    window.open(downloadurl,'_blank');
+                    window.location = downloadurl;
                 }
             });
         } else {
-            window.open(downloadurl,'_blank');
+            window.location = downloadurl;
         }
     }
 </script>
