@@ -3,6 +3,7 @@
 config.inc.php
 .htaccess
 *.zip
+downloads-wip
 
 # IntelliJ project files
 *.iml

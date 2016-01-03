@@ -34,6 +34,38 @@
 </head>
 
 <body id="page-top" class="index">
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-3278050-14', 'auto');
+    ga('send', 'pageview');
+
+
+    var downloadFile = function(dtype, url) {
+        var downloadurl = 'downloads/' + url;
+        if (ga.hasOwnProperty('loaded') && ga.loaded === true) {
+            ga('send', 'event', 'Downloads', dtype, url, {
+                'transport': 'beacon',
+                'hitCallback': function () {
+                    window.open(downloadurl,'_blank');
+                }
+            });
+        } else {
+            window.open(downloadurl,'_blank');
+        }
+    }
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.5&appId=509668109235888";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -63,6 +95,9 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#materialen">Materialen</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#team">Het team</a>
@@ -192,15 +227,77 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">De materialen</h2>
-                    <h3 class="section-subheading text-muted">Download hier binnenkort alles wat je nodig hebt om aan de slag te kunnen.</h3>
-                    <img src="img/underconstruction.png" alt="Under construction"/>
+                    <h3 class="section-subheading text-muted">Download hieronder de benodigde materialen. Er staan PDF bestanden voor wie snel aan de slag wil, maar ook de orginele bronbestanden zijn beschikbaar voor de echte digitale knutselaars.
+                        Alle spullen zijn beschikbaar onder de CC BY-SA 4.0 licentie. Wat dat inhoud kun je <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.nl" class="black">hier</a> lezen.<br/>&nbsp;<br/>
+                        <strong>Let op: Sommige materialen zijn nog in een vroege versie! We proberen regelmatig nieuwe versies te plaatsen.</strong></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="service-heading">De spelhandleiding</h4>
+                    <p class="text-muted">
+                    De handleiding is bedoeld voor de spelleider. Hij is op dit moment nog erg minimaal, maar hopelijk voldoende om direct aan de slag te kunnen.
+                        <ul>
+                            <li><a href="downloads/handleiding/Handleiding.pdf" class="black" onclick="downloadFile('dist', 'handleiding/Handleiding.pdf'); return false;" target="_blank">Download de handleiding (<strong>PDF</strong>)</a></li>
+                        </ul>
+
+                    <small>(Versie: Januari 2015)</small>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="service-heading">De spelmaterialen</h4>
+                    <p class="text-muted">Naast het spelbord dat je zelf zult moeten maken (zie handleiding) worden in het spel nog actiekaarten gebruikt. Deze zijn als volledige set te downloaden, of als losse bestanden
+                        <ul>
+                            <li><a href="downloads/spelmaterialen/Actiekaarten.pdf" class="black" onclick="downloadFile('dist', 'spelmaterialen/Actiekaarten.pdf'); return false;" target="_blank">Download de volledige set actiekaarten (<strong>PDF</strong>)</a></li>
+                            <li><a href="downloads/spelmaterialen/Actiekaarten.psd" class="black" onclick="downloadFile('src', 'spelmaterialen/Actiekaarten.psd'); return false;" target="_blank">Download het bronbestand (<strong>PSD, Photoshop bestand</strong>)</a></li>
+                        </ul>
+                        Of download de afzonderlijke kaartjes per stuk:
+                        <ul>
+                            <li><a href="downloads/spelmaterialen/Actiekaart-1Achteruit.pdf" class="black" onclick="downloadFile('dist', 'spelmaterialen/Actiekaart-1Achteruit.pdf'); return false;" target="_blank">1 stap achteruit (<strong>PDF</strong>)</a></li>
+                            <li><a href="downloads/spelmaterialen/Actiekaart-1Rechtuit.pdf" class="black" onclick="downloadFile('dist', 'spelmaterialen/Actiekaart-1Rechtuit.pdf'); return false;" target="_blank">1 stap rechtuit (<strong>PDF</strong>)</a></li>
+                            <li><a href="downloads/spelmaterialen/Actiekaart-2Rechtuit.pdf" class="black" onclick="downloadFile('dist', 'spelmaterialen/Actiekaart-2Rechtuit.pdf'); return false;" target="_blank">2 stappen rechtuit (<strong>PDF</strong>)</a></li>
+                            <li><a href="downloads/spelmaterialen/Actiekaart-3Rechtuit.pdf" class="black" onclick="downloadFile('dist', 'spelmaterialen/Actiekaart-3Rechtuit.pdf'); return false;" target="_blank">3 stappen rechtuit (<strong>PDF</strong>)</a></li>
+                            <li><a href="downloads/spelmaterialen/Actiekaart-DraaiLinks.pdf" class="black" onclick="downloadFile('dist', 'spelmaterialen/Actiekaart-DraaiLinks.pdf'); return false;" target="_blank">Draai links (<strong>PDF</strong>)</a></li>
+                            <li><a href="downloads/spelmaterialen/Actiekaart-DraaiRechts.pdf" class="black" onclick="downloadFile('dist', 'spelmaterialen/Actiekaart-DraaiRechts.pdf'); return false;" target="_blank">Draai rechts (<strong>PDF</strong>)</a></li>
+                            <li><a href="downloads/spelmaterialen/Actiekaart-UDraai.pdf" class="black" onclick="downloadFile('dist', 'spelmaterialen/Actiekaart-UDraai.pdf'); return false;" target="_blank">U draai (180 graden) (<strong>PDF</strong>)</a></li>
+                        </ul>
+
+                        <small>(Versie: Januari 2015)</small>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="service-heading">Posters</h4>
+                    <p class="text-muted">De posters kun je gebruiken ter promotie, of om de uitleg te laten zien aan de kinderen die het spel gaan spelen. Print hem bij voorkeur groot uit (Minimaal A3).
+                        <ul>
+                            <li><a href="downloads/posters/Poster-ProgrammeerJeMoeder.pdf" class="black" onclick="downloadFile('dist', 'posters/Poster-ProgrammeerJeMoeder.pdf'); return false;" target="_blank">Download de Programmeer je moeder promoposter (<strong>PDF</strong>)</a></li>
+                            <li><a href="downloads/posters/Poster-ProgrammeerJeMeesterOfJuf.pdf" class="black" onclick="downloadFile('dist', 'posters/Poster-ProgrammeerJeMeesterOfJuf.pdf'); return false;" target="_blank">Download de Programmeer je meester of juf promoposter(<strong>PDF</strong>)</a></li>
+                            <li><a href="downloads/posters/Poster-Basis1.pages" class="black" onclick="downloadFile('src', 'posters/Poster-Basis1.pages'); return false;" target="_blank">Download het bronbestand (<strong>Apple Pages bestand</strong>)</a></li>
+                        </ul>
+
+                        <small>(Versie: Januari 2015)</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid Section -->
+    <section id="contact" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contact met ons</h2>
+                    <h3 class="section-subheading text-muted">We horen graag van jullie hoe het spelen van Levend Programmeren bevallen is. Het lijkt ons leuk op Facebook contact te onderhouden en elkaar te voorzien van tips en updates</h3>
+
+                    <a href="http://www.facebook.com/levendprogrammeren"><img src="img/linkfacebook.png" alt="Link naar Facebook" target="_blank"/></a>
+                    <div class="fb-like" data-href="http://www.facebook.com/levendprogrammeren" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="bg-light-gray">
+    <section id="team">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -263,24 +360,19 @@
     <aside class="clients">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                     <a href="#">
                         <img src="img/logos/saxion.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                     <a href="#">
                         <img src="img/logos/ruudgrevennl.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                     <a href="#">
                         <img src="img/logos/openclipart.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
             </div>
@@ -331,20 +423,10 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <span class="copyright">LevendProgrammeren.nl 2015</span>
                 </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a>
                 </div>
             </div>
